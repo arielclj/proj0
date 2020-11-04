@@ -1,18 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <title>Search</title>
-</head>
-
-<body>
-    <a href="gis.html">Google Image Search</a>
-    <a href="gas.html">Google Advanced Search</a>
-    <br>
-    <form action="https://google.com/search">
-        <input type="text" name="q">
+    <title>Google Homepage</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <header>
+      <nav>
+        <ul id="nav_bar">
+          <li class="nav-links" id="gmail"><a href="#">Advanced Search</a></li>
+          <li class="nav-links"><a href="#">Images</a></li>
+          <li id="sign_in"><a href="#">Sign In</a></li>
+        </ul>  
+      </nav>  
+    </header>  
+    
+    <!-- GOOGLE LOGO  -->  
+    <div class="google">
+      <a href="#" id="google_logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRC1nKfkC7nX7r_uZD1Jzx0_ks6hd0ShK5ZFw&usqp=CAU" alt=" photo google-logo_zpspkcztsjo.png"/></a>
+    </div>
+    
+    <!-- GOOGLE SEARCH -->  
+    <div class="form">  
+      <form action="https://google.com/search">
+        <input type="text" id="form-search" name="q" >
         <input type="submit" value="Google Search">
-    </form>
-</body>
+      </form>
+    
+    </div>  
+    
+    <!-- LUCKY BUTTONS -->
+    <div class= "buttons">  
+      <form action="https://www.google.com/doodles">
+        <input type="submit" value="I'm Feeling Lucky" id="im_feeling_lucky">
+      </form>
 
-</html>
+    </div>
+
+      
+    <!-- FOOTER -->
+    <footer>
+        <ul class="footer-left">
+          <li><a href="#">Advertising</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">About</a></li> 
+        </ul>
+        <ul class="footer-right">    
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>       
+    </footer>      
+  </body>
