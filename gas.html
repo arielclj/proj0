@@ -1,22 +1,438 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-SG">
 
 <head>
-    <title>Search</title>
+
+    <style>
+        /* Nav Bar */
+        #nav_bar {
+            float: right;
+        }
+
+        #nav_bar li {
+            display: inline-block;
+            padding: 6px;
+        }
+
+        .nav-links {
+            color: #404040;
+        }
+
+        #nav_bar #sign_in {
+            background: #4887ef;
+            margin-right: 25px;
+            padding: 8px 15px;
+            border-radius: 3px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        #sign_in:hover {
+            box-shadow: 1px 1px 5px rgb(219, 217, 217);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+        }
+
+        body {
+            font-family: arial, sans-serif
+        }
+
+        .jfk-button {
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            cursor: default;
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+            white-space: nowrap;
+            margin-right: 16px;
+            height: 27px;
+            line-height: 27px;
+            min-width: 54px;
+            outline: 0;
+            padding: 0 8px
+        }
+
+        .jfk-button-action {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            background-color: #4d90fe;
+            background-image: -webkit-linear-gradient(top, #4d90fe, #4787ed);
+            background-image: -moz-linear-gradient(top, #4d90fe, #4787ed);
+            background-image: -ms-linear-gradient(top, #4d90fe, #4787ed);
+            background-image: -o-linear-gradient(top, #4d90fe, #4787ed);
+            background-image: linear-gradient(top, #4d90fe, #4787ed);
+            border: 1px solid #3079ed;
+            color: #fff
+        }
+
+        .jfk-textinput {
+            -webkit-border-radius: 1px;
+            -moz-border-radius: 1px;
+            border-radius: 1px;
+            border: 1px solid #d9d9d9;
+            border-top: 1px solid #c0c0c0;
+            font-size: 13px;
+            height: 25px;
+            padding: 1px 8px
+        }
+
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        font,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-weight: inherit;
+            font-style: inherit;
+            font-size: 100%;
+            vertical-align: baseline;
+            text-decoration: none
+        }
+
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        html {
+            height: 100%
+        }
+
+        body {
+            min-height: 100%;
+            position: relative
+        }
+
+        .appbar {
+            color: #d93025;
+            font-size: 20px;
+            margin: 25px 35px
+        }
+
+        .a1 {
+            border-bottom: 1px solid #ebebeb
+        }
+
+        div.i9 {
+            padding-right: 16px
+        }
+
+        div.b2 {
+            max-width: 1140px;
+            min-width: 200px;
+            width: 96%;
+            margin: 40px 2% 0 45px
+        }
+
+        div.c3 {
+            width: 100%;
+            clear: both
+        }
+
+        div.c3 div.d4 {
+            clear: both
+        }
+
+        div.c3 div.e5,
+       {
+            float: left;
+            display: inline-block;
+            min-width: 167px;
+            width: 16%;
+            font-size: 16px;
+            height: 42px;
+            font-weight: 500;
+            color: #333;
+            vertical-align: middle
+        }
+
+        div.c3 {
+            float: left;
+            display: inline-block;
+            min-width: 167px;
+            min-height: 41px;
+            vertical-align: middle;
+            width: 50%
+        }
+
+        div.c3 div.orcpGe {
+            float: left;
+            display: inline-block;
+            width: 33%;
+            font-size: 13px;
+            font-weight: 700;
+            color: #777;
+            padding-left: 5px;
+            vertical-align: middle
+        }
+
+        div.c3 div.g7 {
+            float: left;
+            display: inline-block;
+            min-width: 167px;
+            width: 16%;
+            height: 42px;
+            color: #222;
+            font-size: 13px;
+            line-height: 16px;
+            vertical-align: middle
+        }
+
+        div.c3 div.k11 {
+            float: left;
+            display: inline-block;
+            min-width: 167px;
+            min-height: 41px;
+            vertical-align: middle;
+            width: 50%
+        }
+
+        div.c3 div.cwqNnb {
+            float: left;
+            display: inline-block;
+            width: 32%;
+            min-width: 160px;
+            margin: 0 0 8px 1%;
+            color: #555;
+            font-size: 11px;
+            padding-left: 5px;
+            vertical-align: middle;
+            position: relative
+        }
+
+        div.c3 div.VN084b {
+            clear: both;
+            font-size: 13px;
+            line-height: 16px;
+            height: 20px;
+            text-align: left
+        }
+
+        div.f6 {
+            height: 30px;
+            display: table-cell;
+            vertical-align: middle
+        }
+
+        div.c3 div.k11 input[type="text"],
+        div.c3 div.k11 span.PnexQd {
+            width: 100%;
+            text-align: left
+        }
+
+        div.c3 div.k11 select {
+            width: 100%;
+            height: 29px;
+            font-weight: 700;
+            font-size: 11px;
+            background-color: #eee;
+            line-height: 27px;
+            padding-left: 4px;
+            color: #333;
+            border: 1px solid #d9d9d9;
+            border-top: 1px solid #c0c0c0;
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 2px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-border-radius: 1px
+        }
+
+        div.c3 div.cwqNnb span.BFlQMb {
+            color: #666;
+            font-family: monospace;
+            font-size: 11px;
+            white-space: pre
+        }
+
+        div.Qy8Xkb {
+            margin: 18px 0;
+            clear: both;
+            border-top: 1px solid #ebebeb
+        }
+
+        input.j10 {
+            padding: 0 12px
+        }
+
+        div.c3 div.d4 input.j10 {
+            float: right;
+            margin: 10px 0
+        }
+
+        @media (max-width:1056px) {
+            div.orcpGe {
+                display: none !important
+            }
+
+            div.dulCv {
+                display: none !important
+            }
+
+            div.cwqNnb {
+                display: none !important
+            }
+        }
+    </style>
 </head>
 
-<body>
-    <a href="index.html">Google Search</a>
-    <a href="gis.html">Google Image Search</a>
-    <br>
-    <span>Find pages with...</span>
-    <form action="https://google.com/search">
-        all these words: <input type="text" name="as_q"><br>
-        this exact word or phrase: <input type="text" name="as_epq"><br>
-        any of these words: <input type="text" name="as_oq"><br>
-        none of these words: <input type="text" name="as_eq"><br>
-        <input type="submit" value="Advanced Search">
-    </form>
+<body class="jfk-scrollbar">
+
+    <div class="bottom-wrapper">
+        <header>
+            <nav>
+                <ul id="nav_bar">
+                    <li class="nav-links"><a href="index.html">Back to Google Search</a></li>
+                    <li class="nav-links"><a href="gis.html">Images</a></li>
+                    <li id="sign_in"><a href="#">Sign In</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="appbar"> <label style="margin-left:10px">Advanced Search</label> </div>
+        <div class="a1"></div>
+        <div class="b2">
+            <form action="https://google.com/search" method="GET" name="f">
+                <div class="c3">
+                    <div class="d4">
+                        <div class="e5">
+                            <div class="f6"> <span>Find pages with...</span> </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="c3">
+                    <div class="d4">
+                        <div class="g7">
+                            <div class="f6"> <label for="xX4UFf">all these words:</label> </div>
+                        </div>
+                        <div class="k11">
+                            <div class="i9"> <input class="jfk-textinput" value="" autofocus="autofocus" 
+                                    name="as_q" type="text"> </div>
+                        </div>
+
+                    </div>
+                    <div class="d4">
+                        <div class="g7">
+                            <div class="f6"> <label for="CwYCWc">this exact word or phrase:</label> </div>
+                        </div>
+                        <div class="k11">
+                            <div class="i9"> <input class="jfk-textinput" value="" name="as_epq"
+                                    type="text"> </div>
+                        </div>
+
+                    </div>
+                    <div class="d4">
+                        <div class="g7">
+                            <div class="f6"> <label for="mSoczb">any of these words:</label> </div>
+                        </div>
+                        <div class="k11">
+                            <div class="i9"> <input class="jfk-textinput" value="" name="as_oq"
+                                    type="text"> </div>
+                        </div>
+
+                    </div>
+                    <div class="d4">
+                        <div class="g7">
+                            <div class="f6"> <label for="t2dX1c">none of these words:</label> </div>
+                        </div>
+                        <div class="h8">
+                            <div class="i9"> <input class="jfk-textinput" value="" name="as_eq"
+                                    type="text"> </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="c3">
+                    <div class="d4">
+                        <div class="g7"></div>
+                        <div class="k11" style="text-align:right"> <input class="jfk-button jfk-button-action j10"
+                                style="-webkit-user-select:none;user-select:none;line-height:100%;height:30px;min-width:120px"
+                                value="Advanced Search" type="submit"> </div>
+
+                    </div>
+                    <div class="d4"></div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
 </body>
 
 </html>
