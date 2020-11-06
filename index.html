@@ -4,6 +4,7 @@
     <title>Google Homepage</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
   </head>
   
   <body>
@@ -25,7 +26,10 @@
     <!-- GOOGLE SEARCH -->  
     <div class="form">  
       <form action="https://google.com/search">
-        <input type="text" id="form-search" name="q">
+        <div class="input-icons"> 
+          <i class="fa fa-search icon"></i> 
+          <input type="text" id="form-search" name="q">
+        </div>
         <div id="buttons"> 
             <!-- SEARCH BUTTONS -->
             <input class="button" type="submit" value="Google Search">

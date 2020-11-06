@@ -4,6 +4,8 @@
     <title>Google Image</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="static/gis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
 </head>
 <body>
     <header>
@@ -24,9 +26,12 @@
     <!-- SEARCH -->  
     <div class="form">  
         <form action="https://google.com/search">
+          <div class="input-icons"> 
+            <i class="fa fa-search icon"></i> 
             <input type="text" id="form-search" name="q">
-            <input type="hidden" name="tbm" value="isch">
-            <input class="button" type="submit" value="Google Image Search">
+          </div>
+          <input type="hidden" name="tbm" value="isch">
+          <input class="button" type="submit" value="Google Image Search">
         </form>
     </div>  
 

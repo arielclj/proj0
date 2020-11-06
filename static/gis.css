@@ -1,5 +1,5 @@
 
-/* BODY */
+/* BASIC STYLES */
 body {
     margin: 0;
     padding: 0;
@@ -73,20 +73,39 @@ a {
     font-family: arial,sans-serif;  
     width: 600px;
     line-height: 32px;
-    padding: 4px 8px;
+    padding: 6px 8px;
+    padding-left: 35px;
     border-radius: 20px; 
     border: 2px solid rgba(175, 164, 164, 0.315);
 }
 
 #form-search:hover {
     border-color: #e4e4e4;
-    padding-top: 0;
+    padding: 6px 8px;
+    padding-left: 35px;
     box-shadow: 1px 1px 5px rgb(179, 177, 177);
 }
 
 #form-search:focus {
     outline: none;
 }
+ 
+/* SEARCH ICON */
+.input-icons i { 
+    position: absolute; 
+} 
+
+.input-icons { 
+    width: 100%; 
+    margin-bottom: 10px; 
+} 
+
+.icon { 
+    padding: 15px; 
+    color: rgb(179, 177, 177); 
+    min-width: 70px; 
+    text-align: left; 
+} 
 
 /* #form-search:-webkit-autofill {
     color: #f2f2f2 !important; 
@@ -145,6 +164,10 @@ footer ul a:hover {
 
     #google_logo {
     padding: 0;
+    }
+
+    .buttons {
+    display: none;
     }
 
     #form-search {
